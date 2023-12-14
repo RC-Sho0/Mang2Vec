@@ -1,0 +1,6 @@
+torch==2.1.1
+gdown
+cairosvg
+pandas==2.1.3
+numpy==1.26.2
+opencv-python-headless

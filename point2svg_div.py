@@ -141,7 +141,7 @@ class Point2svg(object):
 
         (h, w) = img.shape
         max_size = max(h, w)
-        svg_patch_size = np.float(svg_size) / div_num
+        svg_patch_size = np.float64(svg_size) / div_num
 
         patch_size = 0
         while True:
