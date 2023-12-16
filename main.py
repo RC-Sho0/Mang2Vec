@@ -98,7 +98,6 @@ if __name__ == '__main__':
                 p2s.add_action_div(actions)  # =================================
                 vu.save_img(canvas, args.imgid, divide_number=divide, width=width, origin_shape=origin_shape,
                             divide=True)
-                p2s.save_results()
                 args.imgid += 1
 
             end1 = time.time()
@@ -108,6 +107,9 @@ if __name__ == '__main__':
             unless_time2_e = time.time()
             d.draw_decode()
             end2 = time.time()
+
+            p2s.save_results()
+
 
             time_actor = end1 - start
             time_paint = end2 - end1 - unless_time - (unless_time2_e - unless_time2_s)
