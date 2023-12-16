@@ -102,16 +102,16 @@ if __name__ == '__main__':
 
             end1 = time.time()
             unless_time = p2s.draw_action_list_for_all_patch(path_or_circle='path')
-            unless_time2_s = time.time()
-            d = Decode_np(div_num=divide, use_PM=use_PM)
-            unless_time2_e = time.time()
-            d.draw_decode()
+            # unless_time2_s = time.time()
+            # d = Decode_np(div_num=divide, use_PM=use_PM)
+            # unless_time2_e = time.time()
+            # d.draw_decode()
             end2 = time.time()
 
             p2s.save_results()
 
 
             time_actor = end1 - start
-            time_paint = end2 - end1 - unless_time - (unless_time2_e - unless_time2_s)
+            # time_paint = end2 - end1 - unless_time - (unless_time2_e - unless_time2_s)
             print("actor time is : {}".format(time_actor))
-            print("paint time is : {}".format(time_paint))
+            # print("paint time is : {}".format(time_paint))
