@@ -443,19 +443,19 @@ class Point2svg(object):
                           self.coord_bais, self.div_num, patch_num]
                 self.config_list.append(config)
 
-        s = time.time()
-        temp_path = "./output_np/"
-        d.del_file(temp_path)
-        d.save_np(mat=np.array(self.all_patch_actions), name='all_patch_actions')
-        d.save_np(mat=np.array(self.patch_done_list), name='patch_done_list')
-        d.save_np(mat=np.array(self.config_list), name='config_list')
-        d.save_np(mat=np.array(self.patch_bgcolor_list), name='patch_bgcolor_list')
-        d.save_np(mat=np.array(self.fill_list), name='fill_list')
-        d.save_np(mat=np.array(self.START_TXT), name='START_TXT')
-        d.save_np(mat=np.array(self.END_TXT), name='END_TXT')
-        d.save_np(mat=np.array(self.div_num), name='div_num')
-        d.save_np(mat=np.array(self.width), name='width')
-        e = time.time()
-        print("Successfully saved temp variables to "+ temp_path)
-        return e-s
+        # s = time.time()
+        # temp_path = "./output_np/"
+        # d.del_file(temp_path)
+        # d.save_np(mat=np.array(self.all_patch_actions), name='all_patch_actions')
+        # d.save_np(mat=np.array(self.patch_done_list), name='patch_done_list')
+        # d.save_np(mat=np.array(self.config_list), name='config_list')
+        # d.save_np(mat=np.array(self.patch_bgcolor_list), name='patch_bgcolor_list')
+        # d.save_np(mat=np.array(self.fill_list), name='fill_list')
+        # d.save_np(mat=np.array(self.START_TXT), name='START_TXT')
+        # d.save_np(mat=np.array(self.END_TXT), name='END_TXT')
+        # d.save_np(mat=np.array(self.div_num), name='div_num')
+        # d.save_np(mat=np.array(self.width), name='width')
+        # e = time.time()
+        # print("Successfully saved temp variables to "+ temp_path)
+        # return e-s
 
