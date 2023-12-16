@@ -98,6 +98,7 @@ if __name__ == '__main__':
                 p2s.add_action_div(actions)  # =================================
                 vu.save_img(canvas, args.imgid, divide_number=divide, width=width, origin_shape=origin_shape,
                             divide=True)
+                p2s.save_results()
                 args.imgid += 1
 
             end1 = time.time()

@@ -392,11 +392,11 @@ class Point2svg(object):
             SAVE_PATH_SVG = self.SAVE_PATH + str(self.num) + '.svg'
             SAVE_PATH_PNG = self.SAVE_PATH + str(self.num) + '_svg.png'
             SAVE_PATH_PDF = self.SAVE_PATH + str(self.num) + '_svg.pdf'
-            # self.create_str_to_svg(svg_path=SAVE_PATH_SVG, str_data=self.svg_txt_total)
+            self.create_str_to_svg(svg_path=SAVE_PATH_SVG, str_data=self.svg_txt_total)
             self.mysvg2png(svg_txt=self.svg_txt_total, save_path=SAVE_PATH_PNG)
             self.mysvg2pdf(svg_txt=self.svg_txt_total, save_path=SAVE_PATH_PDF)
             # self.mysvg2pdf(svg_txt=self.svg_txt_total, save_path=SAVE_PATH_SVG)
-            self.create_str_to_svg(svg_path=SAVE_PATH_SVG, str_data=self.svg_txt_total)
+            # self.create_str_to_svg(svg_path=SAVE_PATH_SVG, str_data=self.svg_txt_total)
             print(SAVE_PATH_PNG)
 
 
@@ -448,7 +448,7 @@ class Point2svg(object):
         d.del_file(temp_path)
         d.save_np(mat=np.array(self.all_patch_actions), name='all_patch_actions')
         d.save_np(mat=np.array(self.patch_done_list), name='patch_done_list')
-        # d.save_np(mat=np.array(self.config_list), name='config_list')
+        d.save_np(mat=np.array(self.config_list), name='config_list')
         d.save_np(mat=np.array(self.patch_bgcolor_list), name='patch_bgcolor_list')
         d.save_np(mat=np.array(self.fill_list), name='fill_list')
         d.save_np(mat=np.array(self.START_TXT), name='START_TXT')
