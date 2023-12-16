@@ -89,11 +89,11 @@ if __name__ == '__main__':
             vu.save_img(canvas, args.imgid, divide_number=divide, width=width, origin_shape=origin_shape, divide=True)
             args.imgid += 1
             start = time.time()
-            unless_time = p2s.draw_action_list_for_all_patch(path_or_circle='path')
             for i in range(args.max_step):
                 stepnum = T * i / args.max_step
                 actions = actor(torch.cat([canvas, patch_img, stepnum, coord], 1))
                 p2s.reset_gt_patch(gt=patch_img)
+                p2s.draw_action_list_for_all_patch(path_or_circle='path')
                 canvas, res = vu.decode_list(actions, canvas)
                 print('divided canvas step {}, Loss = {}'.format(i, ((canvas - patch_img) ** 2).mean()))
                 p2s.add_action_div(actions)  # =================================
