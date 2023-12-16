@@ -89,6 +89,7 @@ if __name__ == '__main__':
             vu.save_img(canvas, args.imgid, divide_number=divide, width=width, origin_shape=origin_shape, divide=True)
             args.imgid += 1
             start = time.time()
+            unless_time = p2s.draw_action_list_for_all_patch(path_or_circle='path')
             for i in range(args.max_step):
                 stepnum = T * i / args.max_step
                 actions = actor(torch.cat([canvas, patch_img, stepnum, coord], 1))
@@ -99,16 +100,16 @@ if __name__ == '__main__':
                 vu.save_img(canvas, args.imgid, divide_number=divide, width=width, origin_shape=origin_shape,
                             divide=True)
                 args.imgid += 1
+                p2s.save_results()
+
 
             end1 = time.time()
-            unless_time = p2s.draw_action_list_for_all_patch(path_or_circle='path')
             # unless_time2_s = time.time()
             # d = Decode_np(div_num=divide, use_PM=use_PM)
             # unless_time2_e = time.time()
             # d.draw_decode()
             end2 = time.time()
 
-            p2s.save_results()
 
 
             time_actor = end1 - start
