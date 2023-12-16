@@ -98,11 +98,11 @@ if __name__ == '__main__':
                 p2s.add_action_div(actions)  # =================================
                 vu.save_img(canvas, args.imgid, divide_number=divide, width=width, origin_shape=origin_shape,
                             divide=True)
-                p2s.save_results()
                 args.imgid += 1
 
             end1 = time.time()
             unless_time = p2s.draw_action_list_for_all_patch(path_or_circle='path')
+            p2s.save_results()
             unless_time2_s = time.time()
             d = Decode_np(div_num=divide, use_PM=use_PM)
             unless_time2_e = time.time()
